@@ -1,5 +1,5 @@
 body{
-
+  font-family: 'Orbitron', sans-serif;
 }
 
 *{
@@ -22,11 +22,33 @@ body{
   height: 90%;
   margin: 40px auto;
   flex-wrap: wrap;
+
   background: lightgrey;
 }
 
 .quadrato{
   width: calc(100% / 6);
   height: calc(100% / 6);
+  justify-content: center;
+  align-items: center;
+
   border: 1px solid white;
+  cursor: pointer;
+
+  transition: all 0.2s linear;
+}
+.quadrato:hover{
+  /* transform: scale(0.9); */
+  box-shadow: inset 0px 0px 6px 2px #281e1e70
+}
+.quadrato:active{
+  transform: scale(0.9);
+}
+
+.verde{
+  background: green;
+}
+
+.giallo{
+  background: yellow;
 }
