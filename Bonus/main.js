@@ -8,6 +8,10 @@ varie che vi vengono in mente per sperimentare;*/
 $( document ).ready(function() {
     console.log( "ready!" );
 
+    function popUpFade(){
+      $('.gia-cliccato').fadeOut()
+    }
+
 
     /* ------ CLICK ----- */
     $('.quadrato').click( //ad ogni click (su ogni rettangolino)...
@@ -19,7 +23,11 @@ $( document ).ready(function() {
         /* ------- ISTRUZIONE CONDIZIONALE IN CASO DI DOPPIO CLICK ------ */
         if ($this.attr('statusClick') === 'clicked') {
 
-          $pNum.html('Già Cliccato!');
+          $this.append('<div class="gia-cliccato"><p>Gia Cliccato!</p></div>');
+          $this.css({ "position": "relative"})
+          $('.gia-cliccato', this).show()
+
+          setTimeout(popUpFade, 1000)
 
         } else {
 

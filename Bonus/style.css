@@ -54,3 +54,18 @@ body{
 .giallo{
   background: yellow;
 }
+
+.gia-cliccato{
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 999;
+  transform: rotate(45deg);
+  width: 150px;
+  padding: 10px;
+  text-align: center;
+  /* box-shadow: 2px 3px 7px 0px #ffffff70; */
+  background: #e91e6370;
+  display: none;
+
+}
