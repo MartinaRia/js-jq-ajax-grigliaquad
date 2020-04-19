@@ -8,8 +8,10 @@ varie che vi vengono in mente per sperimentare;*/
 $( document ).ready(function() {
     console.log( "ready!" );
 
+    /* --- dichiarazione funzione per condizione doppio click ---*/
+    //l'etichetta scompare
     function popUpFade(){
-      $('.gia-cliccato').fadeOut()
+      $('.gia-cliccato').fadeOut();
     }
 
 
@@ -21,13 +23,15 @@ $( document ).ready(function() {
         var $pNum = $('.num', this);
 
         /* ------- ISTRUZIONE CONDIZIONALE IN CASO DI DOPPIO CLICK ------ */
-        if ($this.attr('statusClick') === 'clicked') {
+        if ($this.attr('statusClick') === 'clicked') { //se il quadrato è stato già cliccato
 
+          //compare un etichettà di avviso
           $this.append('<div class="gia-cliccato"><p>Gia Cliccato!</p></div>');
-          $this.css({ "position": "relative"})
-          $('.gia-cliccato', this).show()
+          $this.css({ "position": "relative"});
+          $('.gia-cliccato', this).show();
 
-          setTimeout(popUpFade, 1000)
+          //l'etichetta scompare dopo 1 sec
+          setTimeout(popUpFade, 1000);
 
         } else {
 
